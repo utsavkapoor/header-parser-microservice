@@ -8,6 +8,10 @@
 var fs = require('fs');
 var express = require('express');
 var app = express();
+var mini = require('./views/mini.js');
+var full = require('./views/full.js');
+
+var port = process.env.PORT || 3000
 
 if (!process.env.DISABLE_XORIGIN) {
   app.use(function(req, res, next) {
@@ -24,19 +28,19 @@ if (!process.env.DISABLE_XORIGIN) {
 
 app.use('/public', express.static(process.cwd() + '/public'));
 
-app.route('/_api/package.json')
-  .get(function(req, res, next) {
-    console.log('requested');
-    fs.readFile(__dirname + '/package.json', function(err, data) {
-      if(err) return next(err);
-      res.type('txt').send(data.toString());
-    });
-  });
   
 app.route('/')
     .get(function(req, res) {
 		  res.sendFile(process.cwd() + '/views/index.html');
-    })
+    });
+
+app.route('/mini/whoami').get(function(req,res){
+  mini(req,res);
+    });
+
+app.route('/full/whoami').get(function(req,res){
+  full(req,res);
+});
 
 // Respond not found to all the wrong routes
 app.use(function(req, res, next){
@@ -53,7 +57,7 @@ app.use(function(err, req, res, next) {
   }  
 })
 
-app.listen(process.env.PORT, function () {
-  console.log('Node.js listening ...');
+app.listen(port, function () {
+  console.log("service running on the port" + port);
 });
 
