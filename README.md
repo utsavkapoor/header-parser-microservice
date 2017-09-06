@@ -1,1 +1,31 @@
-# Backend Challenges boilerplate - package.json
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Backend Challenges | Free Code Camp</title>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="/public/style.css" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+      <div class="container">
+         <h1>API BASEJUMP: REQUEST HEADER PARSE</h1>
+        <h3>User Stories for MINI version of API:</h3>
+        <ol>
+          <li>I can get the IP address, language and operating system for my browser.</li>
+        </ol>
+        <h3>User Stories for FULL version of API:</h3>
+        <ol>
+          <li>I can get the IP address, method used, secure, language and operating system for my browser.</li>
+        </ol>
+        <h2>Example Usage:</h2>
+        <h4 class="example"><span>https://ukapoor-header-parser.glitch.me/mini/whoami</span></h4>
+          <h4 class="example"><span>https://ukapoor-header-parser.glitch.me/full/whoami</span></h4>
+        <h2>Example Output:</h2>
+          <h4 class="example"><span>{"IP" : "68.225.194.90", "language" : "en-US", "OS": "Macintosh; Intel Mac OS X 10_12_6" }</span></h4>
+          <h4 class="example"><span>{"IP" : "68.225.194.90" , "METHOD" : "GET" , "Secure" : "No" , "language" : "en-US" , "OS" : "Macintosh; Intel Mac OS X 10_12_6" }</span></h4>
+      </div>
+     <footer class="footer">
+     <p>Created by : <a href="https://github.com/utsavkapoor" target="_blank">Utsav Kapoor</a></p>
+  <p>Free Code Camp Challenge: <a href="https://www.freecodecamp.org/challenges/request-header-parser-microservice" target="_blank">Request Header Parsewr Challenge</a></p>
+     </footer>
+   </body>
+</html>
