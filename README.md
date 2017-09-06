@@ -22,9 +22,5 @@
           <h4 class="example"><span>{"IP" : "68.225.194.90", "language" : "en-US", "OS": "Macintosh; Intel Mac OS X 10_12_6" }</span></h4>
           <h4 class="example"><span>{"IP" : "68.225.194.90" , "METHOD" : "GET" , "Secure" : "No" , "language" : "en-US" , "OS" : "Macintosh; Intel Mac OS X 10_12_6" }</span></h4>
       </div>
-     <footer class="footer">
-     <p>Created by : <a href="https://github.com/utsavkapoor" target="_blank">Utsav Kapoor</a></p>
-  <p>Free Code Camp Challenge: <a href="https://www.freecodecamp.org/challenges/request-header-parser-microservice" target="_blank">Request Header Parsewr Challenge</a></p>
-     </footer>
    </body>
 </html>
